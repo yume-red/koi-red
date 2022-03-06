@@ -1,0 +1,123 @@
+* {
+  box-sizing: boder-box;
+}
+h3 {
+color: #ffcccc;
+text-shadow:  0px 0px 4px #ffcccc;
+font-weight: normal;
+margin: 0.5em;
+}
+p {
+color: #ffcccc;
+text-shadow:  0px 0px 4px #ffcccc;
+font-weight: normal;
+margin: 0.8em;
+}
+h1 {
+color: #ffcccc;
+text-shadow:  0px 0px 4px #ffcccc;
+font-weight: normal;
+}
+body {
+  margin: 0;
+  background: #1c1c1c;
+  font-family:monospace;
+}
+html {
+  }
+#main {
+  position: relative;
+  z-index: 20;
+  background: #1c1c1c;
+  -webkit-transition: -webkit-transform .1s ease;
+  transition: -webkit-transform .1s ease;
+  transition: transform .1s ease;
+  transition: transform .1s ease, -webkit-transform .1s ease;
+}
+@media (min-width: 640px) {
+  #main {
+    padding: 1em;
+  }
+}
+
+.fake-section {
+  background: #eee;
+  height: 300px;
+}
+
+.tiles-a {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.tiles-a ul {
+  margin: 0;
+  padding: 0;
+}
+.tiles-a li {
+  list-style: none;
+}
+@media (min-width: 640px) {
+  .tiles-a li {
+    float: left;
+    width: 33.33%;
+  }
+}
+.tiles-a a {
+  margin: 2em;
+  display: block;
+  background: #222;
+  padding-top: 45%;
+  border-radius: 10px;
+  height: 0;
+  text-decoration: none;
+}
+
+#aside {
+  position: fixed;
+  cursor:url("favicon-16x16.png"), auto;
+  top: 0;
+  right: 0;
+  width: 65.3%;
+  height: 100%;
+  background: #1c1c1c;
+  overflow-y: scroll;
+  z-index: 10;
+}
+#aside img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 1em;
+  vertical-align: top;
+}
+#aside .wrapper {
+  padding: 3em;
+}
+#aside .close {
+  width: 25px;
+  display: block;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.show-detail {
+  overflow: hidden;
+}
+.show-detail #main {
+  -webkit-transform: translateX(-65.3%);
+          transform: translateX(-65.3%);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
